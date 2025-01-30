@@ -18,31 +18,31 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 
 ## Packages:-
 - For Power Profile (For KDE Plasma Desktop Environment)
-```
+```bash
 sudo pacman -S power-profiles-daemon
 ```
-```
+```bash
 sudo systemctl enable power-profiles-daemon.service
 ```
-```
+```bash
 sudo reboot
 ```
 - For Bluetooth
-```
+```bash
 yay -S bluez bluez-utils
 ```
-```
+```bash
 sudo systemctl enable bluetooth
 ```
-```
+```bash
 sudo systemctl start bluetooth
 ```
 - Fastfetch
-```
+```bash
 yay -S fastfetch
 ```
 - Neofetch
-```
+```bash
 yay -S neofetch
 ```
 
@@ -86,7 +86,7 @@ wpctl status
 ```
 ### Kitty Configuration: 
 > Run below commands
-```
+```bash
 cd /home/veronica/.config/kitty/
 ```
 > Then you will see three files `kitty.conf`, `kitty.conf.bak` and `theme.conf`
@@ -221,4 +221,19 @@ color7  #CDD6F4
 color15 #A1A8C9
 ```
 > It's done...
-### Setting up two finger swipe guesture in google-chrome
+### Setting up two-finger swipe gesture in google-chrome
+> Run below command
+```bash
+sudo nano /usr/share/applications/google-chrome.desktop
+```
+> Copy replace these lines with same line in google-chrome.desktop file in order
+```bash
+Exec=/usr/bin/google-chrome-stable %U --enable-features=TouchpadOverscrollHistoryNavigation
+```
+```bash
+Exec=/usr/bin/google-chrome-stable --enable-features=TouchpadOverscrollHistoryNavigation
+```
+```bash
+Exec=/usr/bin/google-chrome-stable --incognito %U --enable-features=TouchpadOverscrollHistoryNavigation
+```
+> Done...
