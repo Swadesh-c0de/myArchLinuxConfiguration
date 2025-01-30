@@ -37,7 +37,14 @@ sudo systemctl enable bluetooth
 ```
 sudo systemctl start bluetooth
 ```
-
+- Fastfetch
+```
+yay -S fastfetch
+```
+- Neofetch
+```
+yay -S neofetch
+```
 
 ## Configurations:-
 - visual-studio-code-bin: 
