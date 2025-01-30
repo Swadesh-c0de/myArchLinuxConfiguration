@@ -9,11 +9,12 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 - Mission Center
 - Stacer
 - Kitty
-- Eye of Gnome
+- Eye of Gnome ([Visit Site](https://archlinux.org/packages/extra/x86_64/eog/))
 - Spectacle (for screenshot)
 - Telegram
 - visual-studio-code-bin
 - superfile ([Visit Site](https://superfile.netlify.app/))
+- LibreOffice ([Visit Site](https://wiki.archlinux.org/title/LibreOffice))
 
 
 ## Packages:-
@@ -42,7 +43,7 @@ sudo systemctl start bluetooth
 ## Configurations:-
  visual-studio-code-bin: 
 ```bash
-Path: /home/veronica/.config/Code/User/settings.json
+File Path: /home/veronica/.config/Code/User/settings.json
 ```
 
 
@@ -66,3 +67,4 @@ Path: /home/veronica/.config/Code/User/settings.json
     "terminal.integrated.inheritEnv": false
 }
 ```
+  
