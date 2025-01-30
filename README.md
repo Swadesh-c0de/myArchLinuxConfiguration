@@ -18,7 +18,7 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 
 
 ## Packages:-
-- For Power Profile
+- For Power Profile (For KDE Plasma Desktop Environment)
 ```
 sudo pacman -S power-profiles-daemon
 ```
@@ -41,12 +41,12 @@ sudo systemctl start bluetooth
 
 
 ## Configurations:-
- visual-studio-code-bin: 
+> - visual-studio-code-bin: 
+ Run below command
 ```bash
-File Path: /home/veronica/.config/Code/User/settings.json
+sudo nano /home/veronica/.config/Code/User/settings.json
 ```
-
-
+> Remove everything and then paste this
 ```json
 {
     "workbench.colorTheme": "Catppuccin Mocha",
@@ -67,4 +67,11 @@ File Path: /home/veronica/.config/Code/User/settings.json
     "terminal.integrated.inheritEnv": false
 }
 ```
-  
+- Fixing sound issue (In Acer Predator Helios Neo 16 PHN16-71):
+
+```
+wpctl status
+```
+```
+sudo modprobe snd_hda_intel
+```
