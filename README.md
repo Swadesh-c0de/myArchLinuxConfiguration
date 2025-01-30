@@ -47,7 +47,7 @@ yay -S neofetch
 ```
 
 ## Configurations:-
-- visual-studio-code-bin: 
+=> visual-studio-code-bin: 
 > Run below command
 ```bash
 sudo nano /home/veronica/.config/Code/User/settings.json
