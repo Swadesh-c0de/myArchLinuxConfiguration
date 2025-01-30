@@ -1,2 +1,2 @@
 # myArchLinuxConfiguration
-This repo contains the tools and setting I used in arch linux operating system for better developement and learnings.
+The tools and settings I utilized in the Arch Linux operating system for better learning and development are in this repository.
