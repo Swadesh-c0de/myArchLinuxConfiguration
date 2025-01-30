@@ -47,7 +47,7 @@ yay -S neofetch
 ```
 
 ## Configurations:-
-=> visual-studio-code-bin: 
+### visual-studio-code-bin: 
 > Run below command
 ```bash
 sudo nano /home/veronica/.config/Code/User/settings.json
@@ -73,7 +73,7 @@ sudo nano /home/veronica/.config/Code/User/settings.json
     "terminal.integrated.inheritEnv": false
 }
 ```
-- Fixing sound issue (In Acer Predator Helios Neo 16 PHN16-71):
+### Fixing sound issue (In Acer Predator Helios Neo 16 PHN16-71):
 > Run below commands
 ```
 wpctl status
@@ -84,7 +84,7 @@ sudo modprobe snd_hda_intel
 ```
 wpctl status
 ```
-- Kitty Configuration: 
+### Kitty Configuration: 
 > Run below commands
 ```
 cd /home/veronica/.config/kitty/
@@ -221,3 +221,4 @@ color7  #CDD6F4
 color15 #A1A8C9
 ```
 > It's done...
+### Setting up two finger swipe guesture in google-chrome
