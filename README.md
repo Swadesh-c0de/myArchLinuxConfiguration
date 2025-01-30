@@ -41,11 +41,11 @@ sudo systemctl start bluetooth
 
 ## Configurations:-
 - visual-studio-code-bin: 
-Run below command
+> Run below command
 ```bash
 sudo nano /home/veronica/.config/Code/User/settings.json
 ```
->Remove everything and then paste this
+> Remove everything and then paste this
 ```json
 {
     "workbench.colorTheme": "Catppuccin Mocha",
@@ -78,12 +78,12 @@ sudo modprobe snd_hda_intel
 wpctl status
 ```
 - Kitty Configuration: 
-Run below commands
+> Run below commands
 ```
 cd /home/veronica/.config/kitty/
 ```
-Then you will see three files `kitty.conf`, `kitty.conf.bak` and `theme.conf`
-For `kitty.conf` paste this in place of text inside
+> Then you will see three files `kitty.conf`, `kitty.conf.bak` and `theme.conf`
+> For `kitty.conf` paste this in place of text inside
 ```
 # font_family      CaskaydiaCove Nerd Font Mono
 # bold_font        auto
@@ -111,7 +111,7 @@ italic_font      true
 bold_italic_font auto
 # END_KITTY_FONTS
 ```
-For `kitty.conf.bak`, do same as above
+> For `kitty.conf.bak`, do same as above
 ```
 font_family      CaskaydiaCove Nerd Font Mono
 bold_font        auto
@@ -131,7 +131,7 @@ include userprefs.conf
 
 # Note: as userprefs.conf is included at the end, settings configured in this file will override the defaults
 ```
-For `theme.conf`, do same as above
+> For `theme.conf`, do same as above
 ```
 
 ## name:     Catppuccin Mocha 🌿
