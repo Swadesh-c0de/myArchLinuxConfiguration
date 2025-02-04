@@ -45,7 +45,10 @@ yay -S fastfetch
 ```bash
 yay -S neofetch
 ```
-
+- For Screenshot
+```bash
+yay -S spectacle
+```
 ## Configurations:-
 ### visual-studio-code-bin: 
 > Run below command
