@@ -234,7 +234,7 @@ sudo nano /usr/share/applications/google-chrome.desktop
 Exec=/usr/bin/google-chrome-stable %U --enable-features=TouchpadOverscrollHistoryNavigation
 ```
 ```bash
-Exec=/usr/bin/google-chrome-stable --enable-features=TouchpadOverscrollHistoryNavigation
+Exec=/usr/bin/google-chrome-stable %U --enable-features=TouchpadOverscrollHistoryNavigation
 ```
 ```bash
 Exec=/usr/bin/google-chrome-stable --incognito %U --enable-features=TouchpadOverscrollHistoryNavigation
