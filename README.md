@@ -239,4 +239,8 @@ Exec=/usr/bin/google-chrome-stable %U --enable-features=TouchpadOverscrollHistor
 ```bash
 Exec=/usr/bin/google-chrome-stable --incognito %U --enable-features=TouchpadOverscrollHistoryNavigation
 ```
+> Then save the google-chrome.desktop file and run the below command as it is
+```bash
+sudo update-desktop-database /usr/share/applications/
+```
 > Done...
