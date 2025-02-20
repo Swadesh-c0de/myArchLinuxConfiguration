@@ -49,6 +49,10 @@ yay -S neofetch
 ```bash
 yay -S spectacle
 ```
+- For System Monitoring
+```bash
+sudo pacman -S htop btop nvtop
+```
 ## Configurations:-
 ### visual-studio-code-bin: 
 > Run below command
