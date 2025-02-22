@@ -54,8 +54,21 @@ yay -S spectacle
 sudo pacman -S htop btop nvtop
 ```
 ## Configurations:-
+### kitty:
+> Run the below command
+```bash
+nano ~/.bashrc
+```
+> Then copy the following script and paste in the file
+```bash
+if [ -z "$STARTUP_IMAGE_DISPLAYED" ]; then
+    kitty +kitten icat /home/veronica/.config/fastfetch/pngs/arch.icon
+    export STARTUP_IMAGE_DISPLAYED=1
+fi
+```
+> That will render the image at the path when a new kitty tab will open.
 ### visual-studio-code-bin: 
-> Run below command
+> Run the below command
 ```bash
 sudo nano /home/veronica/.config/Code/User/settings.json
 ```
