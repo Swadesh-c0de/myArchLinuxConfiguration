@@ -62,7 +62,7 @@ nano ~/.bashrc
 > Then copy the following script and paste in the file
 ```bash
 if [ -z "$STARTUP_IMAGE_DISPLAYED" ]; then
-    kitty +kitten icat /home/veronica/.config/fastfetch/pngs/arch.icon
+    kitty +kitten icat /home/veronica/.config/fastfetch/pngs/arch.png
     export STARTUP_IMAGE_DISPLAYED=1
 fi
 ```
