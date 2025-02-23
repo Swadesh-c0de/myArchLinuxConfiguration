@@ -62,9 +62,26 @@ nano ~/.bashrc
 > Then copy the following script and paste in the file
 ```bash
 if [ -z "$STARTUP_IMAGE_DISPLAYED" ]; then
-    kitty +kitten icat /home/veronica/.config/fastfetch/pngs/arch.png
+    # Get a random image from the directory
+    IMAGE_PATH=$(find /home/veronica/.config/fastfetch/pngs/ -type f -iname "*.png" | shuf -n 1)
+
+    # Set the desired height in pixels (you can experiment with this value)
+    HEIGHT=300  # Adjust this value for your needs
+
+    # Resize the image using ImageMagick (magick convert)
+    RESIZED_IMAGE_PATH="/tmp/resized_image.png"
+    magick "$IMAGE_PATH" -resize x$HEIGHT "$RESIZED_IMAGE_PATH"
+
+    # Display the resized image using kitty
+    kitty +kitten icat "$RESIZED_IMAGE_PATH"
+
+    # Set the environment variable to avoid re-running
     export STARTUP_IMAGE_DISPLAYED=1
 fi
+```
+> Requirements
+```bash
+imagemagick
 ```
 > That will render the image at the path when a new kitty tab will open.
 ### visual-studio-code-bin: 
