@@ -129,31 +129,47 @@ cd /home/veronica/.config/kitty/
 > Then you will see three files `kitty.conf`, `kitty.conf.bak` and `theme.conf`
 > For `kitty.conf` paste this in place of text inside
 ```
-# font_family      CaskaydiaCove Nerd Font Mono
-# bold_font        auto
-# italic_font      auto
-# bold_italic_font auto
-enable_audio_bell no
+include hyde.conf
+# Add your custom configurations here
+
+# Font and Appearance
+font_family Maple Mono
 font_size 12.0
-window_padding_width 10
-include theme.conf
-cursor_trail 1
-#background_opacity 0.60
-#hide_window_decorations yes
-#confirm_os_window_close 0
 
-# initially empty, to be configured by user and remains static
-include userprefs.conf
+# Disable window borders
+window_padding_width 0
+borderless_window yes
 
-# Note: as userprefs.conf is included at the end, settings configured in this file will override the defaults
+# Transparency and Background
+background_opacity 0.95
+background #2e3440
+foreground #d8dee9
+selection_background #434c5e
+selection_foreground #88c0d0
 
+# Color Scheme
+color0 #3b4252
+color1 #a3be8c
+color2 #81a1c1
+color3 #ebcb8b
+color4 #b48ead
+color5 #8fbcbb
+color6 #88c0d0
+color7 #e5e9f0
+color8 #4c566a
+color9 #bf616a
+color10 #a3be8c
+color11 #ebcb8b
+color12 #81a1c1
+color13 #b48ead
+color14 #8fbcbb
+color15 #eceff4
 
-# BEGIN_KITTY_FONTS
-font_family      family="Maple Mono"
-bold_font        auto
-italic_font      true
-bold_italic_font auto
-# END_KITTY_FONTS
+# Cursor
+cursor_shape block
+cursor_color #d8dee9
+
+#startup_image "/home/veronica/.config/fastfetch/pngs/arch.icon"
 ```
 > For `kitty.conf.bak`, do same as above
 ```
