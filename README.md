@@ -126,7 +126,27 @@ wpctl status
 ```bash
 cd /home/veronica/.config/kitty/
 ```
-> Then you will see three files `kitty.conf`, `kitty.conf.bak` and `theme.conf`
+> Then you will see three files `kitty.conf`, `kitty.conf.bak`, `theme.conf` and `hyde.conf`
+> For `hyde,conf` paste this in place of text inside
+```
+# This is the configuration file for kitty terminal
+# For more information, see https://sw.kovidgoyal.net/kitty/conf.html
+# For your custom configurations, put it in ./kitty.conf
+font_family CaskaydiaCove Nerd Font Mono
+bold_font auto
+italic_font auto
+bold_italic_font auto
+enable_audio_bell no
+font_size 9.0
+window_padding_width 25
+cursor_trail 1
+
+# Themes can override any settings in this file
+include theme.conf
+#background_opacity 0.60
+#hide_window_decorations yes
+#confirm_os_window_close 0
+```
 > For `kitty.conf` paste this in place of text inside
 ```
 include hyde.conf
