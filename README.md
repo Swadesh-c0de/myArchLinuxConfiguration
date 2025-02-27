@@ -126,9 +126,8 @@ wpctl status
 ```bash
 cd /home/veronica/.config/kitty/
 ```
-> Then you will see three files `kitty.conf`, `kitty.conf.bak`, `theme.conf` and `hyde.conf`
-``
-> For `hyde.conf` paste this in place of text inside
+> Then you will see four files `kitty.conf`, `kitty.conf.bak`, `theme.conf` and `hyde.conf`
+>> For `hyde.conf` paste this in place of text inside
 ```
 # This is the configuration file for kitty terminal
 # For more information, see https://sw.kovidgoyal.net/kitty/conf.html
