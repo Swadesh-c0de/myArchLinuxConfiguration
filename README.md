@@ -147,7 +147,7 @@ include theme.conf
 #hide_window_decorations yes
 #confirm_os_window_close 0
 ```
-> For `kitty.conf` paste this in place of text inside
+>> For `kitty.conf` paste this in place of text inside
 ```
 include hyde.conf
 # Add your custom configurations here
@@ -191,7 +191,7 @@ cursor_color #d8dee9
 
 #startup_image "/home/veronica/.config/fastfetch/pngs/arch.icon"
 ```
-> For `kitty.conf.bak`, do same as above
+>> For `kitty.conf.bak`, do same as above
 ```
 font_family      CaskaydiaCove Nerd Font Mono
 bold_font        auto
@@ -211,7 +211,7 @@ include userprefs.conf
 
 # Note: as userprefs.conf is included at the end, settings configured in this file will override the defaults
 ```
-> For `theme.conf`, do same as above
+>> For `theme.conf`, do same as above
 ```
 
 ## name:     Catppuccin Mocha 🌿
@@ -293,7 +293,7 @@ color14 #94E2D5
 color7  #CDD6F4
 color15 #A1A8C9
 ```
-> It's done...
+>> It's done...
 ### Setting up two-finger swipe gesture in google-chrome
 > Run below command
 ```bash
