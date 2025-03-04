@@ -57,7 +57,7 @@ sudo pacman -S htop btop nvtop
 ## Configurations:-
 
 ### kitty:
-> To show the images when termianl tab opens. Run the below command
+> To show the images on new terminal tab opening. Run the below command
 ```bash
 nano ~/.bashrc || ~/.zshrc
 ```
