@@ -14,6 +14,7 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 - visual-studio-code-bin
 - superfile ([Visit Site](https://superfile.netlify.app/))
 - LibreOffice ([Visit Site](https://wiki.archlinux.org/title/LibreOffice))
+- zsh and oh_my_zsh
 
 
 ## Packages:-
@@ -54,10 +55,11 @@ yay -S spectacle
 sudo pacman -S htop btop nvtop
 ```
 ## Configurations:-
+
 ### kitty:
-> Run the below command
+> To show the images when termianl tab opens. Run the below command
 ```bash
-nano ~/.bashrc
+nano ~/.bashrc || ~/.zshrc
 ```
 > Then copy the following script and paste in the file
 ```bash
@@ -84,6 +86,7 @@ fi
 imagemagick
 ```
 > That will render the image at the path when a new kitty tab will open.
+
 ### visual-studio-code-bin: 
 > Run the below command
 ```bash
@@ -110,6 +113,7 @@ sudo nano /home/veronica/.config/Code/User/settings.json
     "terminal.integrated.inheritEnv": false
 }
 ```
+
 ### Fixing sound issue (In Acer Predator Helios Neo 16 PHN16-71):
 > Run below commands
 ```
@@ -121,6 +125,7 @@ sudo modprobe snd_hda_intel
 ```
 wpctl status
 ```
+
 ### Kitty Configuration: 
 > Run below commands
 ```bash
@@ -314,3 +319,27 @@ Exec=/usr/bin/google-chrome-stable --incognito %U --enable-features=TouchpadOver
 sudo update-desktop-database /usr/share/applications/
 ```
 > Done...
+
+### Setting up zsh
+> Run the commands
+```bash
+sudo pacman -S zsh
+```
+> Set zsh to default shell
+```bash
+chsh -s $(which zsh)
+```
+> Now installing Oh My Zsh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+> Find the file `.zshrc` in this repo. Copy this in `Home` directory. Then run below command
+```bash
+source ~/.zshrc
+```
+> Hopefully it's done
+
+### Setting up fastfetch to display images along with device specification
+> Find the fastfetch file in this repo. Copy that fastfetch file in `.config` directory in `Home` directory.
+
+>> After it's done run `fastfetch` in terminal to check if it's working or not.
