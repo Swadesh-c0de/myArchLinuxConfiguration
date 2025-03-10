@@ -15,6 +15,7 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 - superfile ([Visit Site](https://superfile.netlify.app/))
 - LibreOffice ([Visit Site](https://wiki.archlinux.org/title/LibreOffice))
 - zsh and oh_my_zsh
+- Obsidian
 
 
 ## Packages:-
