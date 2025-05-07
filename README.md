@@ -16,6 +16,7 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 - LibreOffice ([Visit Site](https://wiki.archlinux.org/title/LibreOffice))
 - zsh and oh_my_zsh
 - Obsidian
+- Calculator ([Visit Site](https://apps.kde.org/en-gb/kalk/))
 
 
 ## Packages:-
