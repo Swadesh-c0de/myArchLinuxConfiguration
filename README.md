@@ -345,3 +345,5 @@ source ~/.zshrc
 > Find the fastfetch file in this repo. Copy that fastfetch file in `.config` directory in `Home` directory.
 
 >> After it's done run `fastfetch` in terminal to check if it's working or not.
+
+>> Must install `imagemagick` to make it work
