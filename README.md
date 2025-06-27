@@ -18,6 +18,11 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 - Obsidian
 - Calculator ([Visit Site](https://apps.kde.org/en-gb/kalk/))
 
+## Coding modules
+- jdk
+```bash
+sudo pacman -S jdk-openjdk
+```
 
 ## Packages:-
 - For Power Profile (For KDE Plasma Desktop Environment)
