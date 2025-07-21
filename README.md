@@ -309,6 +309,9 @@ color15 #A1A8C9
 ### Setting up two-finger swipe gesture in google-chrome
 > Run below command
 ```bash
+sudo pacman -Syu xdg-desktop-portal-kde  xdg-desktop-portal
+```
+```bash
 sudo nano /usr/share/applications/google-chrome.desktop
 ```
 > Copy replace these lines with same line in google-chrome.desktop file in order
