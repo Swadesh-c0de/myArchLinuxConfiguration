@@ -355,3 +355,18 @@ source ~/.zshrc
 >> After it's done run `fastfetch` in terminal to check if it's working or not.
 
 >> Must install `imagemagick` to make it work
+
+### Fixing up stuck on shutdown screen
+> Run these commands as it is...
+```bash
+sudo nano /etc/modprobe.d/blacklist-nouveau.conf
+```
+> Write this in the conf file...
+```
+blacklist nouveau
+```
+> Save and exit
+```bash
+sudo mkinitcpio -P
+```
+> Reboot system
