@@ -18,6 +18,14 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 - Obsidian
 - Calculator ([Visit Site](https://apps.kde.org/en-gb/kalk/))
 
+### More
+- Postman
+- Warp
+- Windsurf
+- MongoDB Compass
+- Mongosh
+- Antigravity
+
 ## Coding modules
 - jdk
 ```bash
@@ -61,6 +69,13 @@ yay -S spectacle
 ```bash
 sudo pacman -S htop btop nvtop
 ```
+- For live wallpaper
+Downlaod plugin `Smart Video Wallpaper Reborn`
+
+- For monochromatic icon pack
+Downlaod `yetYet Another Monochrome Icon Set For KDE Plasma`
+([See This](https://store.kde.org/p/2303161))
+
 ## Configurations:-
 
 ### kitty:
