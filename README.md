@@ -176,47 +176,120 @@ include theme.conf
 ```
 >> For `kitty.conf` paste this in place of text inside
 ```
+###############################################
+#  Kitty Configuration — Clean & Aesthetic
+#  Theme: Nord Dark — Developer Focused
+###############################################
+
 include hyde.conf
-# Add your custom configurations here
 
-# Font and Appearance
-font_family Maple Mono
-font_size 12.0
+###############################################
+# Font & Appearance
+###############################################
+font_family              Maple Mono
+bold_font                auto
+italic_font              auto
+bold_italic_font         auto
+font_size                12.0
 
-# Disable window borders
-window_padding_width 0
-borderless_window yes
+# Better font rendering
+disable_ligatures        never        # or "cursor" if you want ligatures except under cursor
+adjust_line_height       2
+adjust_column_width      0
 
-# Transparency and Background
-background_opacity 0.95
-background #2e3440
-foreground #d8dee9
-selection_background #434c5e
-selection_foreground #88c0d0
+###############################################
+# Window Layout / Chrome
+###############################################
+window_padding_width     8
+window_margin_width      0
+border_width             0
+borderless_window        yes
 
-# Color Scheme
-color0 #3b4252
-color1 #a3be8c
-color2 #81a1c1
-color3 #ebcb8b
-color4 #b48ead
-color5 #8fbcbb
-color6 #88c0d0
-color7 #e5e9f0
-color8 #4c566a
-color9 #bf616a
-color10 #a3be8c
-color11 #ebcb8b
-color12 #81a1c1
-color13 #b48ead
-color14 #8fbcbb
-color15 #eceff4
+# Rounded corners (if compositor supports it: picom, hyprland, etc.)
+window_corner_radius     6
 
+###############################################
+# Background & Transparency
+###############################################
+background_opacity       0.92
+dynamic_background_opacity yes
+
+background               #2E3440
+foreground               #D8DEE9
+selection_background     #434C5E
+selection_foreground     #88C0D0
+
+# Subtle blur (for picom or hyprland)
+# background_blur         10
+
+###############################################
+# Colors — Nord (Refined)
+###############################################
+color0  #3B4252
+color1  #BF616A
+color2  #A3BE8C
+color3  #EBCB8B
+color4  #81A1C1
+color5  #B48EAD
+color6  #88C0D0
+color7  #E5E9F0
+
+color8  #4C566A
+color9  #BF616A
+color10 #A3BE8C
+color11 #EBCB8B
+color12 #81A1C1
+color13 #B48EAD
+color14 #8FBCBB
+color15 #ECEFF4
+
+###############################################
 # Cursor
-cursor_shape block
-cursor_color #d8dee9
+###############################################
+cursor_shape             beam
+cursor_color             #D8DEE9
+cursor_blink_interval    0.6
 
-#startup_image "/home/veronica/.config/fastfetch/pngs/arch.icon"
+###############################################
+# Scrolling & Performance
+###############################################
+scrollback_lines         10000
+repaint_delay            8
+input_delay              0
+sync_to_monitor          yes
+
+###############################################
+# Terminal Behavior
+###############################################
+confirm_os_window_close  0
+allow_remote_control     yes
+strip_trailing_spaces    smart
+
+###############################################
+# Tabs / Titlebar
+###############################################
+tab_bar_style            powerline
+tab_powerline_style      slanted
+active_tab_foreground    #2E3440
+active_tab_background    #88C0D0
+inactive_tab_foreground  #D8DEE9
+inactive_tab_background  #3B4252
+
+###############################################
+# Keybindings Enhancements
+###############################################
+map ctrl+shift+t        new_tab
+map ctrl+shift+w        close_tab
+map ctrl+shift+h        previous_tab
+map ctrl+shift+l        next_tab
+
+map ctrl+shift+enter    new_window
+
+###############################################
+# Optional Startup Image
+###############################################
+# startup_image "/home/veronica/.config/fastfetch/pngs/arch.icon"
+
 ```
 >> For `kitty.conf.bak`, do same as above
 ```
