@@ -200,7 +200,7 @@ adjust_column_width      0
 ###############################################
 # Window Layout / Chrome
 ###############################################
-window_padding_width     8
+window_padding_width     4
 window_margin_width      0
 border_width             0
 borderless_window        yes
