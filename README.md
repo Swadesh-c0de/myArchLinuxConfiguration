@@ -26,6 +26,12 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 - Mongosh
 - Antigravity
 
+### Setting up MongoDB Compass
+```bash
+yay -S mongodb-compass-bin mongodb-bin
+sudo systemctl enable --now mongodb
+```
+
 ## Coding modules
 - jdk
 ```bash
