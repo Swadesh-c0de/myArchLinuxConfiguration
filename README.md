@@ -20,6 +20,7 @@ The tools and settings I utilized in the Arch Linux operating system for better 
 
 ### More
 - Postman
+- Requestly `yay -S requestly-bin`
 - Warp
 - Windsurf
 - MongoDB Compass
