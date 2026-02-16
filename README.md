@@ -1,5 +1,27 @@
 # my-ArchLinux-Configuration
 
+## Automated Setup 🚀
+
+To set up everything automatically (packages, configurations, themes), simply run:
+
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+This script will:
+- Update your system
+- Install AUR helper (yay) if missing
+- Install all software (Browsers, Dev tools, KDE tools, etc.)
+- Configure Zsh, Oh My Zsh, and plugins
+- Configure Kitty terminal (Theming + Startup Image)
+- Configure VS Code settings
+- Enable necessary services (Bluetooth, Power Profiles, MongoDB)
+- Apply system tweaks (Chrome gestures, optional NVIDIA configs)
+
+---
+
+
 The tools and settings I utilized in the Arch Linux operating system for better learning and development are in this repository.
 
 ## Softwares and Tools:-
