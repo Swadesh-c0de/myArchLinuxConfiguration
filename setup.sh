@@ -119,13 +119,13 @@ PACKAGES=(
     "htop"
     "btop"
     "nvtop"
-    "bluez"
-    "bluez-utils"
-    "power-profiles-daemon"
+    # "bluez"
+    # "bluez-utils"
+    # "power-profiles-daemon"
     # Development
     "visual-studio-code-bin"
-    "postman-bin"
-    "requestly-bin"
+    # "postman-bin"
+    # "requestly-bin"
     "mongodb-compass"
     "mongodb-bin"
     "mongosh-bin"
@@ -135,7 +135,7 @@ PACKAGES=(
     "zsh"
     "fastfetch"
     "neofetch"
-    "warp-terminal"
+    # "warp-terminal"
     # Productivity & Office
     "libreoffice-fresh"
     "obsidian"
@@ -143,7 +143,8 @@ PACKAGES=(
     "superfile-bin"
     # KDE/Gnome Tools
     "eog"
-    "spectacle"
+    "gewnview"
+    # "spectacle"
     "kalk"
     # Fonts
     "ttf-cascadia-code-nerd"
