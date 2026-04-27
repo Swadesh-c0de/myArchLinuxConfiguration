@@ -1,0 +1,7 @@
+[Libinput][1739][52913][SYNA7DB5:00 06CB:CEB1 Touchpad]
+Enabled=true
+NaturalScroll=true
+PointerAcceleration=0.200
+
+[Mouse]
+cursorTheme=volantes_cursors

@@ -113,42 +113,84 @@ fi
 PACKAGES=(
     # Browsers
     "google-chrome"
+    "firefox"
+    
     # System Tools
     "mission-center"
     "stacer"
     "htop"
     "btop"
     "nvtop"
-    # "bluez"
-    # "bluez-utils"
-    # "power-profiles-daemon"
+    "ncdu"
+    "eza"
+    "tree"
+    "wget"
+    "jq"
+    "pacman-contrib"
+    "smartmontools"
+    
+    # Drivers & Firmware
+    "nvidia-open-dkms"
+    "linux-headers"
+    "dkms"
+    "sof-firmware"
+    "intel-media-driver"
+    "libva-intel-driver"
+    "libva-nvidia-driver"
+    "vulkan-intel"
+    "intel-ucode"
+    
     # Development
     "visual-studio-code-bin"
-    # "postman-bin"
-    # "requestly-bin"
-    "mongodb-compass"
-    "mongodb-bin"
-    "mongosh-bin"
-    "jdk-openjdk"
+    "docker"
+    "docker-buildx"
+    "docker-compose"
+    # "jdk-openjdk"
+    "mysql-workbench"
+    # "mongodb-bin"
+    # "mongosh-bin"
+    
     # Terminal & Shell
     "kitty"
     "zsh"
     "fastfetch"
     "neofetch"
+    "imagemagick"
     # "warp-terminal"
+
     # Productivity & Office
-    "libreoffice-fresh"
+    "libreoffice-still"
     "obsidian"
     "telegram-desktop"
     "superfile-bin"
-    # KDE/Gnome Tools
+    # "yt-dlp"
+    "mpv"
+    
+    # KDE/Desktop Tools
+    "plasma-meta"
+    "ark"
+    "dolphin"
+    "gwenview"
     "eog"
-    "gewnview"
-    # "spectacle"
+    # "kate"
+    # "kio-admin"
+    # "konsole"
+    "partitionmanager"
     "kalk"
+    
     # Fonts
     "ttf-cascadia-code-nerd"
     "ttf-maple"
+    "inter-font"
+    "ttf-nerd-fonts-symbols"
+    
+    # Network & Services
+    "networkmanager"
+    "networkmanager-openvpn"
+    "openvpn"
+    # "bluez"
+    # "bluez-utils"
+    # "power-profiles-daemon"
 )
 
 # Function to check if package is missing (for parallel)
@@ -182,23 +224,53 @@ fi
 
 # 4. Configuration
 
-# Bluetooth Service
-# log "Enabling Bluetooth..."
-# sudo systemctl enable --now bluetooth
+# Enable Essential Services
+log "Enabling system services..."
+SERVICES=(
+    # "NetworkManager"
+    # "bluetooth"
+    "sddm"
+    # "docker"
+    # "fstrim.timer"
+)
 
-# Power Profile Service
-# log "Enabling Power Profiles Daemon..."
-# sudo systemctl enable --now power-profiles-daemon.service
+for service in "${SERVICES[@]}"; do
+    if systemctl is-enabled "$service" &> /dev/null; then
+        log "Service $service is already enabled."
+    else
+        log "Enabling $service..."
+        sudo systemctl enable --now "$service"
+    fi
+done
 
-# MongoDB Service
-log "Enabling MongoDB..."
-sudo systemctl enable --now mongodb
+# MongoDB Service (Manual start only)
+# log "Enabling MongoDB..."
+# sudo systemctl enable --now mongodb
 
 # ZSH & Oh My Zsh
 log "Configuring Zsh..."
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     log "Installing Oh My Zsh..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+fi
+
+# Bun
+# if ! command -v bun &> /dev/null; then
+#     log "Installing Bun..."
+#     curl -fsSL https://bun.sh/install | bash
+# fi
+
+# ZSH Plugins
+ZSH_CUSTOM="${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}"
+log "Installing Zsh Plugins..."
+if [ ! -d "$ZSH_CUSTOM/themes/powerlevel10k" ]; then
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "$ZSH_CUSTOM/themes/powerlevel10k"
+fi
+if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+fi
+if [ ! -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
 fi
 
 if [ -f "$DOTFILES_DIR/.zshrc" ]; then

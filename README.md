@@ -15,9 +15,25 @@ This script will:
 - Install all software (Browsers, Dev tools, KDE tools, etc.)
 - Configure Zsh, Oh My Zsh, and plugins
 - Configure Kitty terminal (Theming + Startup Image)
-- Configure VS Code settings
-- Enable necessary services (Bluetooth, Power Profiles, MongoDB)
 - Apply system tweaks (Chrome gestures, optional NVIDIA configs)
+
+### KDE & SDDM Restoration 🎨
+
+To restore your KDE desktop settings (panels, shortcuts, theme) and the SDDM login theme, run:
+
+```bash
+chmod +x restore_kde_sddm.sh
+./restore_kde_sddm.sh
+```
+
+### Backing up current settings 💾
+
+If you make changes to your KDE settings or terminal configs and want to update the repo, run:
+
+```bash
+chmod +x sync_to_repo.sh
+./sync_to_repo.sh
+```
 
 ---
 

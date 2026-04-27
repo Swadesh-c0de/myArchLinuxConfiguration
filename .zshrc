@@ -107,3 +107,11 @@ alias mkdir='mkdir -p'
 
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
 export PATH=~/.npm-global/bin:$PATH
+
+# bun completions
+[ -s "/home/veronica/.bun/_bun" ] && source "/home/veronica/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
