@@ -3,7 +3,11 @@
 # restore_kde_sddm.sh - Restore KDE settings and SDDM theme from this repository
 DOTFILES_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Colors
+if [ -f "$DOTFILES_DIR/scripts/07-kde-sddm.sh" ]; then
+    exec "$DOTFILES_DIR/scripts/07-kde-sddm.sh" "$@"
+fi
+
+# Fallback in case scripts directory is missing
 GREEN='\033[0;32m'
 BLUE='\033[0;34m'
 NC='\033[0m'
@@ -28,7 +32,6 @@ if [ -d "$SDDM_THEME_REPO" ]; then
     sudo mkdir -p "/usr/share/sddm/themes"
     sudo cp -r "$SDDM_THEME_REPO" "/usr/share/sddm/themes/"
     
-    # Configure SDDM to use the theme
     echo "Configuring SDDM..."
     sudo mkdir -p /etc/sddm.conf.d
     echo -e "[Theme]\nCurrent=pixel" | sudo tee /etc/sddm.conf.d/theme.conf > /dev/null

@@ -9,13 +9,33 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-This script will:
-- Update your system
-- Install AUR helper (yay) if missing
-- Install all software (Browsers, Dev tools, KDE tools, etc.)
-- Configure Zsh, Oh My Zsh, and plugins
-- Configure Kitty terminal (Theming + Startup Image)
-- Apply system tweaks (Chrome gestures, optional NVIDIA configs)
+### Modular Setup Options ⚙️
+
+You can run individual tasks using CLI flags or an interactive menu:
+
+```bash
+./setup.sh --help       # Display all options
+./setup.sh --menu       # Launch interactive menu
+./setup.sh --all        # Run all setup tasks (1-7, including KDE & SDDM)
+./setup.sh --system     # Task 1: System update, base tools, yay, parallel
+./setup.sh --packages   # Task 2: Categorized package installation
+./setup.sh --services   # Task 3: System services configuration
+./setup.sh --shell      # Task 4: Zsh, plugins, Kitty, Fastfetch
+./setup.sh --tweaks     # Task 5: Desktop & application tweaks
+./setup.sh --nvidia     # Task 6: NVIDIA & GRUB tweaks
+./setup.sh --kde        # Task 7: KDE configs & SDDM theme restoration
+```
+
+You can also run any task script independently:
+```bash
+./scripts/01-system-update.sh
+./scripts/02-packages.sh
+./scripts/03-services.sh
+./scripts/04-shell-terminal.sh
+./scripts/05-desktop-tweaks.sh
+./scripts/06-nvidia.sh
+./scripts/07-kde-sddm.sh
+```
 
 ### KDE & SDDM Restoration 🎨
 
@@ -198,7 +218,7 @@ wpctl status
 ```bash
 cd /home/veronica/.config/kitty/
 ```
-> Then you will see four files `kitty.conf`, `kitty.conf.bak`, `theme.conf` and `hyde.conf`
+> Then you will see the files `kitty.conf`, `theme.conf` and `hyde.conf`
 >> For `hyde.conf` paste this in place of text inside
 ```
 # This is the configuration file for kitty terminal
@@ -336,26 +356,7 @@ map ctrl+shift+enter    new_window
 # startup_image "/home/veronica/.config/fastfetch/pngs/arch.icon"
 
 ```
->> For `kitty.conf.bak`, do same as above
-```
-font_family      CaskaydiaCove Nerd Font Mono
-bold_font        auto
-italic_font      auto
-bold_italic_font auto
-enable_audio_bell no
-font_size 12.0
-window_padding_width 10
-include theme.conf
-cursor_trail 1
-#background_opacity 0.60
-#hide_window_decorations yes
-#confirm_os_window_close 0
 
-# initially empty, to be configured by user and remains static
-include userprefs.conf
-
-# Note: as userprefs.conf is included at the end, settings configured in this file will override the defaults
-```
 >> For `theme.conf`, do same as above
 ```
 
