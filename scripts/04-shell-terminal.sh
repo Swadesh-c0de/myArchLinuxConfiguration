@@ -57,7 +57,7 @@ else
     warn ".zshrc not found in repository at $DOTFILES_DIR/.zshrc"
 fi
 
-# 4. Deploy Kitty Terminal Config
+# 4. Deploy Kitty Terminal Config & Fonts
 log "Deploying Kitty configuration..."
 if [ -d "$DOTFILES_DIR/.config/kitty" ]; then
     mkdir -p "$HOME/.config"
@@ -66,6 +66,15 @@ if [ -d "$DOTFILES_DIR/.config/kitty" ]; then
     success "Updated Kitty configuration at $HOME/.config/kitty"
 else
     warn "Kitty config directory not found at $DOTFILES_DIR/.config/kitty"
+fi
+
+# Ensure JetBrains Mono Nerd Font is installed
+if [ -f "$DOTFILES_DIR/kittyBacktup/fonts/JetBrainsMono.tar.xz" ] && ! fc-list : family | grep -iq "JetBrainsMono"; then
+    log "Installing JetBrains Mono Nerd Font from bundle..."
+    mkdir -p "$HOME/.local/share/fonts/JetBrainsMono"
+    tar -xJf "$DOTFILES_DIR/kittyBacktup/fonts/JetBrainsMono.tar.xz" -C "$HOME/.local/share/fonts/JetBrainsMono/"
+    fc-cache -f "$HOME/.local/share/fonts"
+    success "JetBrains Mono Nerd Font installed."
 fi
 
 # 5. Deploy Fastfetch Config

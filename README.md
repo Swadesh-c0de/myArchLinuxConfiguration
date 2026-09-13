@@ -213,233 +213,35 @@ sudo modprobe snd_hda_intel
 wpctl status
 ```
 
-### Kitty Configuration: 
-> Run below commands
+### Kitty Configuration:
+
+The repository includes a modern, high-aesthetic Kitty terminal configuration located in `.config/kitty/`.
+
+#### Quick Deployment
+Deploy the configuration and shell setup automatically:
 ```bash
-cd /home/veronica/.config/kitty/
+./setup.sh --shell
 ```
-> Then you will see the files `kitty.conf`, `theme.conf` and `hyde.conf`
->> For `hyde.conf` paste this in place of text inside
-```
-# This is the configuration file for kitty terminal
-# For more information, see https://sw.kovidgoyal.net/kitty/conf.html
-# For your custom configurations, put it in ./kitty.conf
-font_family CaskaydiaCove Nerd Font Mono
-bold_font auto
-italic_font auto
-bold_italic_font auto
-enable_audio_bell no
-font_size 9.0
-window_padding_width 25
-cursor_trail 1
-
-# Themes can override any settings in this file
-include theme.conf
-#background_opacity 0.60
-#hide_window_decorations yes
-#confirm_os_window_close 0
-```
->> For `kitty.conf` paste this in place of text inside
-```
-###############################################
-#  Kitty Configuration — Clean & Aesthetic
-#  Theme: Nord Dark — Developer Focused
-###############################################
-
-include hyde.conf
-
-###############################################
-# Font & Appearance
-###############################################
-font_family              Maple Mono
-bold_font                auto
-italic_font              auto
-bold_italic_font         auto
-font_size                12.0
-
-# Better font rendering
-disable_ligatures        never        # or "cursor" if you want ligatures except under cursor
-adjust_line_height       2
-adjust_column_width      0
-
-###############################################
-# Window Layout / Chrome
-###############################################
-window_padding_width     4
-window_margin_width      0
-border_width             0
-borderless_window        yes
-
-# Rounded corners (if compositor supports it: picom, hyprland, etc.)
-window_corner_radius     6
-
-###############################################
-# Background & Transparency
-###############################################
-background_opacity       0.92
-dynamic_background_opacity yes
-
-background               #2E3440
-foreground               #D8DEE9
-selection_background     #434C5E
-selection_foreground     #88C0D0
-
-# Subtle blur (for picom or hyprland)
-# background_blur         10
-
-###############################################
-# Colors — Nord (Refined)
-###############################################
-color0  #3B4252
-color1  #BF616A
-color2  #A3BE8C
-color3  #EBCB8B
-color4  #81A1C1
-color5  #B48EAD
-color6  #88C0D0
-color7  #E5E9F0
-
-color8  #4C566A
-color9  #BF616A
-color10 #A3BE8C
-color11 #EBCB8B
-color12 #81A1C1
-color13 #B48EAD
-color14 #8FBCBB
-color15 #ECEFF4
-
-###############################################
-# Cursor
-###############################################
-cursor_shape             beam
-cursor_color             #D8DEE9
-cursor_blink_interval    0.6
-
-###############################################
-# Scrolling & Performance
-###############################################
-scrollback_lines         10000
-repaint_delay            8
-input_delay              0
-sync_to_monitor          yes
-
-###############################################
-# Terminal Behavior
-###############################################
-confirm_os_window_close  0
-allow_remote_control     yes
-strip_trailing_spaces    smart
-
-###############################################
-# Tabs / Titlebar
-###############################################
-tab_bar_style            powerline
-tab_powerline_style      slanted
-active_tab_foreground    #2E3440
-active_tab_background    #88C0D0
-inactive_tab_foreground  #D8DEE9
-inactive_tab_background  #3B4252
-
-###############################################
-# Keybindings Enhancements
-###############################################
-map ctrl+shift+t        new_tab
-map ctrl+shift+w        close_tab
-map ctrl+shift+h        previous_tab
-map ctrl+shift+l        next_tab
-
-map ctrl+shift+enter    new_window
-
-###############################################
-# Optional Startup Image
-###############################################
-# startup_image "/home/veronica/.config/fastfetch/pngs/arch.icon"
-
+Or use the self-contained restore script from the backup folder:
+```bash
+cd kittyBacktup && ./restore.sh
 ```
 
->> For `theme.conf`, do same as above
-```
+#### Key Highlights
+- **Typography & Ligatures:** Uses **JetBrains Mono Nerd Font** with programming ligatures (`disable_ligatures cursor`) and generous `115%` cell line height.
+- **Dark Theme (Zero Deep Blue):** Active theme is **OLED Charcoal** (`#121214` neutral pitch dark with warm amber `#E78A4E` highlights, eliminating cold/blue undertones).
+- **Theme Presets Library:** Alternative dark themes stored in `.config/kitty/themes/` (`oled-charcoal.conf`, `gruvbox-dark.conf`, `kanagawa-dragon.conf`, `rose-pine.conf`, `tokyo-night.conf`, `catppuccin-mocha.conf`, `nord.conf`). Switch anytime with `kitten themes`.
+- **Fluid Cursor Animation:** Kitty particle trailing animation on cursor jumps (`cursor_trail 3`).
+- **Glassmorphism & Padding:** `12px 16px` padding, borderless frameless window, and subtle background blur.
+- **Powerline Tab Bar:** Slanted powerline tab bar showing tab index and active folder name.
+- **Productivity Shortcuts:**
+  - `Ctrl + Shift + Enter` / `Ctrl + Shift + D`: Create vertical / horizontal splits (inherits current directory)
+  - `Ctrl + Shift + Z`: Toggle zoom / maximize active split
+  - `Ctrl + Shift + H/J/K/L`: Navigate between splits
+  - `Alt + 1..9`: Direct tab switching
+  - `Ctrl + Shift + E`: Click/open URLs via kitten hints
+  - `Ctrl + Shift + F10 / F11`: Dynamic background opacity adjustment
 
-## name:     Catppuccin Mocha 🌿
-## author:   Pocco81 (https://github.com/Pocco81)
-## license:  MIT
-## upstream: https://github.com/catppuccin/kitty/blob/main/mocha.conf
-## blurb:    Soothing pastel theme for the high-spirited!
-
-
-
-# The basic colors
-foreground              #CDD6F4
-background              #1E1E2E
-selection_foreground    #1E1E2E
-selection_background    #F5E0DC
-
-# Cursor colors
-cursor                  #F5E0DC
-cursor_text_color       #1E1E2E
-
-# URL underline color when hovering with mouse
-url_color               #B4BEFE
-
-# Kitty window border colors
-active_border_color     #CBA6F7
-inactive_border_color   #8E95B3
-bell_border_color       #EBA0AC
-
-# OS Window titlebar colors
-wayland_titlebar_color system
-macos_titlebar_color system
-
-# Tab bar colors
-active_tab_foreground   #11111B
-active_tab_background   #CBA6F7
-inactive_tab_foreground #CDD6F4
-inactive_tab_background #181825
-tab_bar_background      #11111B
-
-# Colors for marks (marked text in the terminal)
-mark1_foreground #1E1E2E
-mark1_background #87B0F9
-mark2_foreground #1E1E2E
-mark2_background #CBA6F7
-mark3_foreground #1E1E2E
-mark3_background #74C7EC
-
-# The 16 terminal colors
-
-# black
-color0 #43465A
-color8 #43465A
-
-# red
-color1 #F38BA8
-color9 #F38BA8
-
-# green
-color2  #A6E3A1
-color10 #A6E3A1
-
-# yellow
-color3  #F9E2AF
-color11 #F9E2AF
-
-# blue
-color4  #87B0F9
-color12 #87B0F9
-
-# magenta
-color5  #F5C2E7
-color13 #F5C2E7
-
-# cyan
-color6  #94E2D5
-color14 #94E2D5
-
-# white
-color7  #CDD6F4
-color15 #A1A8C9
-```
->> It's done...
 ### Setting up two-finger swipe gesture in google-chrome
 > Run below command
 ```bash

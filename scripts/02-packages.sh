@@ -86,6 +86,7 @@ PKGS_KDE_DESKTOP=(
 )
 
 PKGS_FONTS=(
+    "ttf-jetbrains-mono-nerd"
     # "ttf-cascadia-code-nerd"
     # "ttf-maple"
     # "inter-font"
