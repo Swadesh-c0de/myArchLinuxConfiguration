@@ -88,6 +88,17 @@ else
     warn "Fastfetch config directory not found at $DOTFILES_DIR/.config/fastfetch"
 fi
 
+# 6. Deploy Superfile Config
+log "Deploying Superfile configuration..."
+if [ -d "$DOTFILES_DIR/.config/superfile" ]; then
+    mkdir -p "$HOME/.config"
+    backup "$HOME/.config/superfile"
+    cp -r "$DOTFILES_DIR/.config/superfile" "$HOME/.config/"
+    success "Updated Superfile configuration at $HOME/.config/superfile"
+else
+    warn "Superfile config directory not found at $DOTFILES_DIR/.config/superfile"
+fi
+
 # 6. Optional Bun runtime setup
 # if ! command -v bun &> /dev/null; then
 #     log "Installing Bun..."

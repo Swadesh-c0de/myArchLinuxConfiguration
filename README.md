@@ -242,6 +242,20 @@ cd kittyBacktup && ./restore.sh
   - `Ctrl + Shift + E`: Click/open URLs via kitten hints
   - `Ctrl + Shift + F10 / F11`: Dynamic background opacity adjustment
 
+### Superfile Configuration:
+
+Superfile (`spf`) terminal file manager configuration is backed up under `.config/superfile/`.
+
+- **Theme:** Configured with matching **OLED Charcoal** (`oled-charcoal.toml`), matching Kitty's pitch-dark background (`#121214`) and warm amber/gold accents (`#E78A4E` / `#D8A657`) with zero deep blue tint.
+- **Deployment:** Automatically deployed via:
+  ```bash
+  ./setup.sh --shell
+  ```
+- **Sync:** Sync future changes back to the repository anytime with:
+  ```bash
+  ./sync_to_repo.sh
+  ```
+
 ### Setting up two-finger swipe gesture in google-chrome
 > Run below command
 ```bash

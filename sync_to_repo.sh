@@ -37,5 +37,6 @@ echo "Syncing terminal & shell configs..."
 cp "$HOME/.zshrc" "$DOTFILES_DIR/.zshrc"
 cp -r "$HOME/.config/kitty" "$DOTFILES_DIR/.config/"
 cp -r "$HOME/.config/fastfetch" "$DOTFILES_DIR/.config/"
+cp -r "$HOME/.config/superfile" "$DOTFILES_DIR/.config/"
 
 echo "Done! All settings synced to repository."
